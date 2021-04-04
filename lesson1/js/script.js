@@ -1,3 +1,3 @@
 var name = "Василий";
-var admin = "Василий"
+var admin = name;
 alert(admin);
