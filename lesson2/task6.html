@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*6) Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, 
+    operation – строка с названием операции. 
+    В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) 
+    и вернуть полученное значение (использовать switch).*/
+
+    function mathOperation(arg1, arg2, operation) {
+        if (operation !== '+' || operation !== '-' || operation !== '*' || operation !== '/' ) {
+            console.log('Ошибка! Вы ввели неверное название операции. Возможно применить следующие операторы: ' +
+                '+, -, *, /');
+            return;
+        } else if (!isNaN(arg1) && !isNaN(arg2)) {
+            console.log('Ошибка! Пожалуйста, введите число');
+            return;
+        }
+
+        switch (operation) {
+            case '+':
+                return sum(arg1, arg2);
+
+            case '-':
+                return diff(arg1, arg2);
+
+            case '*':
+                return multi(arg1, arg2);
+
+            case '/':
+                return div(arg1, arg2);
+        }
+    }
+
+    </script>
+</body>
+</html>
